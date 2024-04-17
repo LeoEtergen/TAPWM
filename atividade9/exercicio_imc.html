@@ -11,16 +11,13 @@
     <script>
         alert("Bem-vindo à Calculadora de IMC!");
 
-        // Pergunta o peso e a altura
         const weight = parseFloat(prompt("Por favor, insira seu peso em kg:"));
         const height = parseFloat(prompt("Agora, insira sua altura em metros:"));
 
-        // Calcula o IMC
         const imc = weight / (height * height);
 
         let result = '';
 
-        // Verifica e atribui a categoria do IMC
         if (isNaN(imc)) {
             result = 'Por favor, insira valores válidos.';
         } else {
@@ -39,10 +36,7 @@
             }
             result += ` (IMC: ${imc.toFixed(2)})`;
         }
-
-        // Exibe o resultado
         alert("Seu resultado de IMC é: " + result);
-
     </script>
 </body>
 
