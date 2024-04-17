@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var A = parseFloat(prompt("Digite o valor de A:"));
+        var B = parseFloat(prompt("Digite o valor de B:"));
+        var C = parseFloat(prompt("Digite o valor de C:"));
+
+        if (isNaN(A) || isNaN(B) || isNaN(C)) {
+            alert("Por favor, digite apenas números.");
+        } else {
+            
+            if (A + B > C && A + C > B && B + C > A) {
+                if (A === B && B === C) {
+                    alert("O triângulo é equilátero.");
+                } else if (A === B || A === C || B === C) {
+                    alert("O triângulo é isósceles.");
+                } else {
+                    alert("O triângulo é escaleno.");
+                }
+            } else {
+                alert("Os valores fornecidos não podem formar um triângulo.");
+            }
+        }
+    </script>
+</body>
+
+</html>

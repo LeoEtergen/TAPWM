@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num1 = Number(' '); //0
+        var num2 = Number('Boa Noite!'); //NaN
+        var num3 = Number(' '); //0
+        var num4 = Number('000011'); //11
+        var num5 = Number(true); //1
+        var num6 = Number('1.125'); //1.125
+        var num7 = Number(undefined); //NaN
+        var num8 = Number('0b1010'); //10
+        var num9 = Number(' 123A'); //10
+
+        alert(`
+        num1: ${num1}
+        num2: ${num2}
+        num3: ${num3}
+        num4: ${num4}
+        num5: ${num5}
+        num6: ${num6}
+        num7: ${num7}
+        num8: ${num8}
+        num9: ${num9}`);
+
+        //ParseInt - conversões de strings
+        var num10 = parseInt("1234 qualquercoisa");
+        var num20 = parseInt(""); //NaN
+        var num30 = parseInt("0xA"); //10 - hexadecimal
+        var num40 = parseInt("546.5"); //546
+        var num50 = parseInt("70"); //70 - decimal
+        var num60 = parseInt("0xf"); //15 - hexadecimal
+        var num70 = parseInt("-50"); //-50
+        var num80 = parseInt(" 1 6 0"); //1
+
+        alert(`
+        num10: ${num10}
+        num20: ${num20}
+        num30: ${num30} 
+        num40: ${num40}
+        num50: ${num50}
+        num60: ${num60}
+        num70: ${num70}
+        num80: ${num80}`);
+
+        //ParseFloat
+        var num100 = parseFloat("1234 qualquercoisa"); // 
+        var num200 = parseFloat("0xA"); // 10
+        var num300 = parseFloat("22.5"); // 22.5
+        var num400 = parseFloat("22.34.5"); // 22.34
+        var num500 = parseFloat("0908.5"); // 908.5
+        var num600 = parseFloat("22.578").toFixed(2); // 22.58
+        var num700 = parseFloat("22.578").toPrecision(2); // 23
+        var num800 = parseFloat("22.578").toPrecision(3); // 22.6
+
+        alert(`
+        num100: ${num100}
+        num200: ${num200}
+        num300: ${num300} 
+        num400: ${num400}
+        num500: ${num500}
+        num600: ${num600}
+        num700: ${num700}
+        num800: ${num800}`);
+
+        var idade = 18;
+        var idadeAsString = idade.toString(); // "18"
+        var estudante = true;
+        var estudanteAsString = estudante.toString();
+
+        alert(`
+        Idade: ${idadeAsString}
+        Estudante: ${estudanteAsString}`);
+        
+        // assim dá erro
+        //var nada;
+        //var nadaAsString = nada.toString();
+
+        var value1 = 20;
+        var value2 = true;
+        var value3 = null;
+        var value4; //undefined
+        var value5 = 22.5;
+        var value6 = 0/0; //NaN
+
+        alert(String(value1));
+        alert(String(value2));
+        alert(String(value3));
+        alert(String(value4));
+        alert(String(value5));
+        alert(String(value6));
+    </script>
+    
+</body>
+</html>
