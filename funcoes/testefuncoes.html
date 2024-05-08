@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // função declarada
+        function soma(numero1, numero2)
+        {
+            return numero1+numero2;
+        }
+
+        alert(soma(2,3));
+
+        //ou
+        var S = soma(2,3);
+        alert(S);
+
+        // expressão de função
+        var soma1 = function(numero1, numero2)
+        {
+            return numero1+numero2;
+        }
+        alert(soma1(2,3));
+
+        function alo(){
+            return "Nº Argumentos:" +
+            arguments.length + "\n" + arguments[0] +
+            " " + arguments[1];
+        }
+
+        var teste = alo("Sr(a)", "Seu Nome");
+        alert(teste);
+    </script>
+</body>
+</html>
