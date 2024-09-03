@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Teste eventos 2</title>
+    <script>
+        function teste(event) {
+            alert(
+                "x=" + event.x + 
+                " y=" + event.y + 
+                " type=" + event.type + 
+                " target=" + event.target + 
+                " keyCode=" + (event.keyCode || 'N/A') + 
+                " screenX=" + event.screenX + 
+                " screenY=" + event.screenY
+            );
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="Clique aqui" onClick='teste(event)' />
+</body>
+
+</html>
+
