@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformar Texto em Maíusculo ou Minúsculo</title>
+    <link rel="stylesheet" href="Exercicio1.css">
+</head>
+<body>
+    <div class="container">
+        <form name="formulario1">
+            <label for="idNome">Digite qualquer coisa:</label>
+            <input type="text" id="idNome" name="idNome">
+
+            <label>
+                <input type="checkbox" id="uppercaseCheckbox" onclick="transformText('uppercase')"> Transformar em maiúsculas
+            </label>
+
+            <label>
+                <input type="checkbox" id="lowercaseCheckbox" onclick="transformText('lowercase')"> Transformar em minúsculas
+            </label>
+        </form>
+    </div>
+
+    <script src="Exercicio1.js"></script>
+</body>
+</html>
