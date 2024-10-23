@@ -1,26 +1,17 @@
+//var dbConnection = require('../config/dbConnection');
+
 module.exports = function(app){
    app.get('/informacao/professores', function(req,res){
-       const sql = require ('mssql');
- 
-       const sqlConfig = {
-            user: 'BD2412019',
-            password: 'batataAssada99177',
-            database: 'BD', //Na FATEC, utilizar o database BD ou LP8
-            server: 'Apolo', //Caso o nome tenha uma instância, colocar duas barras, ex: ‘DESKTOP\\SQLSERVER. Na FATEC, utilizar o ip: 192.168.1.6 no nome do servidor
-            options: {
-                encrypt: false,
-                trustServerCertificate:true,
-            }
-        }
-  
       async function getProfessores() {
           try {
-              const pool = await sql.connect(sqlConfig);
+
+                var connection = app.config.dbConnection;          
+                const pool = await connection; // executando a função
           
-               const results = await pool.request().query('SELECT * from PROFESSORES')
+                const results = await pool.request().query('SELECT * from PROFESSORES')
           
-               //res.send(results.recordsets)
-               res.render('informacao/professores', {profs: results.recordset});
+                //res.send(results.recordsets)
+                res.render('informacao/professores', {profs: results.recordset});
     
            } catch (err) {
                console.log(err)
@@ -28,5 +19,5 @@ module.exports = function(app){
            //res.render('informacao/professores');
        }
       getProfessores();
-   });
+   }); 
 }

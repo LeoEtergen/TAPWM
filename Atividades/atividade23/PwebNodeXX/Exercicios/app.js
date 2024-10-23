@@ -1,6 +1,6 @@
 var app = require('./app/config/server');
 
-var rotaHome = require('./app/routes/home'); // só está definindo
+/*var rotaHome = require('./app/routes/home'); // só está definindo
 rotaHome(app); // está executando
 
 var rotaAdicionarUsuario = require('./app/routes/adicionar_usuario');
